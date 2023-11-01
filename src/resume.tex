@@ -25,7 +25,7 @@
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
+\usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
 
 % serif
@@ -151,13 +151,35 @@
       {Data Analyst Intern}{June 2021 -- January 2022}
       {Didi Global Inc.}{World Leading Tech Company}
       \resumeItemListStart
-        \resumeItem{Didi, a vehicle-for-hire company headquartered in Beijing with over 550 million users and tens of millions of drivers}
-        \resumeItem{Successfully executed the design and implementation of a comprehensive, internal-use, data visualization dashboard. This web application, created for data analysts, was built employing ReactJS, JavaScript, HTML, and CSS, enabling users to interact and engage with data more effectively}
-        \resumeItem{Worked closely with the backend team to construct a MySQL database, enhanced its performance by \textbf{80\%}}
-        \resumeItem{Conducted comprehensive unit and functional tests for the web application, achieving a test coverage rate of \textbf{90\%}}
-        \resumeItem{Collaborated on a comprehensive passenger retention analysis, discerning patterns between lost and retained users to diagnose user experience challenges, spearheaded a \textbf{6.5\%} enhancement in overall user retention}
-        \resumeItem{Contributed to the development and refinement of a DWM (Data Warehouse Middle) table, which streamlined passenger lifecycle analysis and minimized SQL query complexity, reducing data retrieval time by \textbf{83\%}}
-        \resumeItem{Implemented PySpark in conjunction with Hive Database to orchestrate daily data extraction and report generation processes. This automated solution expedited report sharing via a chat bot API, significantly amplifying work efficiency}
+        \resumeItem{Leading a team of 3 in building a live stream platform from scratch, employing the \textbf{Agile} approach, reviewing \textbf{PR} and solving code conflicts using \textbf{Git}, and writing technical documents to guide the team}
+        \resumeItem{Conceptualized user-friendly UI designs using Figma, implemented  them using \textbf{React}, \textbf{Redux}, \textbf{MUI}, utilized \textbf{GraphQL} for communication with backend services and established end-to-end tests with \textbf{Cypress}}
+        \resumeItem{Mitigated a notable latency issue in HLS streaming by transitioning to \textbf{WebRTC} protocol, reduced the live stream latency from 8s down to \textbf{300ms $\sim$ 1.8s}, which ensured real-time communication}
+        \resumeItem{Tackled the scalability challenge in WebRTC peer-to-peer connections by leveraging a media server for handling concurrent streams, significantly reduced client side burden and improved \textbf{system scalability}}
+        \resumeItem{Fortified stream security and implemented user authentication by developing a \textbf{REST API} that reacts to the \textbf{Webhook} of the media server, utilizing \textbf{NodeJS}, \textbf{Express}, \textbf{Prisma}, \textbf{MongoDB}, and \textbf{JWT} (Json Web Token)}
+        \resumeItem{Reduced system resource consumption by utilizing \textbf{Webhook} for on-demand stream publishing and playing}
+        \resumeItem{Integrated object detection into live stream with a latency under 2s, using \textbf{OpenCV}, \textbf{Django} and \textbf{FFmpeg}}
+        \resumeItem{Improved development productivity by automating \textbf{CI/CD} pipeline for frontend and multiple backend services using \textbf{Jenkins}, \textbf{Docker Compose} and \textbf{Nginx} on \textbf{GCP} (Google Cloud Platform)}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analyst Intern}{June 2021 -- Jan 2022}
+      {Didi Global Inc.}{Beijing}
+      \resumeItemListStart
+        % 问题：新季度的用户持续流失
+        % 目标：挽回用户，提高用户留存率
+        % 行动：使用漏斗分析法，通过各个维度，分析新老用户数据
+        % 结果：与运营部门合作，使用户留存率提高了百分之5.2
+        \resumeItem{Utilized funnel analysis across various dimensions to tackle customer churn, and collaborated with operations department to boost monthly customer retention rate by \textbf{5.2\%} and GMV by \textbf{2.8\%}}
+        % 问题：用户活跃度低，用户使用时长短
+        % 目标：分析原因，并搭建一套分析体系，便于后续跟踪
+        % 行动：定义并搭建用户生命周期模型，协助数据部门搭建数据仓库(DWM)，以方便取数分析
+        % 结果：提升了分析效率，为后续长期的用户活跃度监控和提升提供了良好的框架和基础
+        \resumeItem{Addressed customer inactivity issue by designing a lifecycle framework, aiding the data department in setting up a DWM table, which enhanced analysis \textbf{efficiency} and laid a solid foundation for future analysis}
+        % 问题：每日需要手动提取数据，生成报表，发送给各个部门
+        % 目标：自动化流程，每日准时提取和发送报表
+        % 行动：和RPA部门合作，使用Python编写脚本，实现自动提取下载数据，生成excel报表，并发送到群里
+        % 结果：节省了大量时间，提高了工作效率
+        \resumeItem{Improved work efficiency and reduced manual work by automating daily \textbf{HiveSQL} data extraction and Excel report generation utilizing \textbf{Python} integrated with chatbot API, which ensured timely report sharing}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -170,26 +192,26 @@
    % \resumeSubHeadingListEnd
 % -------------------------------------------
 
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
+    % \resumeSubheading
+    %   {Information Technology Support Specialist}{Sep. 2018 -- Present}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Communicate with managers to set up campus computers used on campus}
+    %     \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
+    %     \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
+    % \resumeItemListEnd
 
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-      \resumeItemListEnd
+    % \resumeSubheading
+    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+    %     \resumeItem{Developed a game in Java to test the generated dungeons}
+    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+    %   \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
@@ -200,18 +222,18 @@
       \resumeProjectHeading
           {\textbf{\underline{\href{https://github.com/xRanger-RTMS}{xRangerRtms}}} $|$ \emph{TypeScript, React, MobX, Flask, Django, PostgreSQL, Git}}{January 2023 -- April 2023}
           \resumeItemListStart
-            \resumeItem{Collaborated in a team of 4 using \textbf{Agile} methodologies to develop a \textbf{real-time} online monitoring and management system for robots, enabling the company to track all robot locations and statuses effectively and efficiently}
-            \resumeItem{Conceived a user-friendly frontend interface using TypeScript and ReactJS, streamlining the monitoring of robot statuses, alerts, and notifications. Amplified UI aesthetics using Bootstrap-React, Font Awesome, and SCSS, and implemented MobX for application state management}
-            \resumeItem{Orchestrated a model for maintaining robot data using the \textbf{MVC} pattern, retrieving real-time and historical data from the xRangerTelemetry backend \textbf{Restful API} asynchronously, and updated the model's view with MobX}
-            \resumeItem{Devised a reference counting mechanism to intelligently start and stop updates for the robot model based on usage across different components. This strategy decreased network requests, reduced server load by \textbf{15\%}, and ensured data consistency across all components}
+            \resumeItem{Collaborated in a team of 4 using \textbf{Agile} methodologies to develop a real-time online monitoring and management system, enabling customers to track robot locations and statuses effectively and efficiently}
+            \resumeItem{Conceived a user-friendly frontend interface using \textbf{TypeScript} and \textbf{ReactJS}, streamlining the monitoring of robot statuses, alerts, and notifications. Amplified UI aesthetics using \textbf{Bootstrap-React, Font Awesome, and SCSS}, and utilized \textbf{MobX} for application state management}
+            \resumeItem{Orchestrated a model for maintaining robot data using the \textbf{MVC} pattern, retrieving real-time and historical data from the xRangerTelemetry backend \textbf{REST API} asynchronously}
+            \resumeItem{Devised a reference counting mechanism using React useEffect hook to start and stop updates for the robot model based on usage across different components. This strategy decreased http requests, reduced backend server load by \textbf{13\%}, and ensured data consistency across all components}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{\underline{\href{https://superchat-55fd7.firebaseapp.com/}{Superchat}}} $|$ \emph{React.js, JavaScript, HTML/CSS, Firebase}}{December 2022}
-          \resumeItemListStart
-            \resumeItem{Accomplished a chat room interface that facilitates real-time message exchanges among users, including message sending, auto-scrolling to the latest message, and real-time updating of chat content}
-            \resumeItem{Implemented user authentication with Google, using Firebase’s authentication modules, to ensure secure sign-in functionality}
-            \resumeItem{Leveraged \textbf{Google’s Cloud Firestore} for real-time data handling and storage of chat messages}
-            \resumeItem{Crafted a dynamic UI that adapts based on the user’s authentication state, incorporating a user-friendly sign-in button and sign-out functionality}
-          \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{\underline{\href{https://superchat-55fd7.firebaseapp.com/}{Superchat}}} $|$ \emph{React.js, JavaScript, HTML/CSS, Firebase}}{December 2022}
+      %     \resumeItemListStart
+      %       \resumeItem{Accomplished a chat room interface that facilitates real-time message exchanges among users, including message sending, auto-scrolling to the latest message, and real-time updating of chat content}
+      %       \resumeItem{Implemented user authentication with Google, using Firebase’s authentication modules, to ensure secure sign-in functionality}
+      %       \resumeItem{Leveraged \textbf{Google’s Cloud Firestore} for real-time data handling and storage of chat messages}
+      %       \resumeItem{Crafted a dynamic UI that adapts based on the user’s authentication state, incorporating a user-friendly sign-in button and sign-out functionality}
+      %     \resumeItemListEnd
     \resumeSubHeadingListEnd
 \end{document}
