@@ -8,7 +8,7 @@
                 "-interaction=nonstopmode",
                 "-file-line-error",
                 "-pdf",
-                "-outdir=%OUTDIR%",
+                "-outdir=%OUTDIR_W32%",
                 "%DOC%"
             ],
             "env": {}
@@ -81,5 +81,6 @@
                 "xelatex"
             ]
         }
-    ]
+    ],
+    "latex-workshop.latex.autoBuild.run": "onSave"
 }
