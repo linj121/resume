@@ -87,7 +87,7 @@
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -137,6 +137,7 @@
       {Software Developer}{July 2023 -- Jan 2024}
       {Longan Vision Corp.}{Hamilton, ON}
       \resumeItemListStart
+        \resumeItem{Maintained the core product, FVS (Fusion Vision System), an embedded device based on \textbf{Yocto}, using \textbf{GTK Clutter} for the user interface and \textbf{GStreamer} for camera capturing and video streaming.}
         \resumeItem{Led a team of 3 in building a live stream platform from scratch, employing the \textbf{Agile} approach, reviewing \textbf{PR} and solving code conflicts using \textbf{Git}, and writing technical documents to guide the team}
         \resumeItem{Conceptualized user-friendly UI designs using Figma, implemented \textbf{reusable} components using \textbf{React}, \textbf{Redux}, \textbf{MUI}, utilized \textbf{GraphQL} for fetching resources and established end-to-end tests with \textbf{Cypress}}
         \resumeItem{Mitigated a notable latency issue in HLS streaming by transitioning to \textbf{WebRTC} protocol, reduced the live stream latency from \textbf{8s down to 300ms}, which ensured real-time communication}
@@ -145,7 +146,7 @@
         \resumeItem{Reduced system resource consumption by utilizing \textbf{Webhook} for on-demand stream publishing and playing}
         \resumeItem{Integrated object detection and face recognition into live stream, using \textbf{OpenCV}, \textbf{Django} and \textbf{FFmpeg}}
         \resumeItem{Improved development productivity by automating \textbf{CI/CD} pipeline for frontend and multiple backend services using \textbf{Jenkins}, \textbf{Docker Compose} and \textbf{Nginx} on \textbf{GCP} (Google Cloud Platform)}
-    \resumeItemListEnd
+      \resumeItemListEnd
 
     \resumeSubheading
       {Data Analyst Intern}{June 2021 -- January 2022}
@@ -199,19 +200,24 @@
     %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
     %   \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
+          {\textbf{\underline{\href{https://github.com/linj121/qtCannyEdgeDetection}{qtCannyEdgeDetection}}} $|$ \emph{Qt6, QML, C++, CMake, OpenCV}}{December 2023}
+          \resumeItemListStart
+            \resumeItem{Build a user friendly GUI application for Canny Edge Detection using \textbf{Qt6} and \textbf{QML}, and integrated \textbf{OpenCV} for image processing}
+            \resumeItem{Improved performance by utilizing \textbf{multithreading} to process images concurrently, which reduced post-processing time by OpenCV}
+          \resumeItemListEnd
+      \resumeProjectHeading
           {\textbf{\underline{\href{https://github.com/xRanger-RTMS}{xRangerRtms}}} $|$ \emph{TypeScript, React, MobX, Flask, Django, PostgreSQL, Git}}{January 2023 -- April 2023}
           \resumeItemListStart
             \resumeItem{Collaborated in a team of 4 using \textbf{Agile} methodologies to develop a real-time online monitoring and management system, enabling customers to track robot locations and statuses effectively and efficiently}
             \resumeItem{Conceived a user-friendly frontend interface using \textbf{TypeScript} and \textbf{ReactJS}, streamlining the monitoring of robot status, alerts, and notifications. Amplified UI aesthetics using \textbf{Bootstrap-React, Font Awesome, and SCSS}, and utilized \textbf{MobX} for application state management}
             \resumeItem{Orchestrated a model for maintaining robot data using the \textbf{MVC} pattern, retrieving real-time and historical data from the xRangerTelemetry backend \textbf{REST API} asynchronously}
-            \resumeItem{Devised a reference counting mechanism using React \textbf{useEffect} hook to start and stop updates for the robot model based on usage across different components. This strategy decreased http requests, reduced backend server load by \textbf{13\%}, and ensured data consistency across all components}
           \resumeItemListEnd
       % \resumeProjectHeading
       %     {\textbf{\underline{\href{https://superchat-55fd7.firebaseapp.com/}{Superchat}}} $|$ \emph{React.js, JavaScript, HTML/CSS, Firebase}}{December 2022}
@@ -228,11 +234,10 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-      \textbf{Languages}{: JavaScript, TypeScript, CSS, HTML, C, Python, SQL} \\
-      \textbf{Web Frontend}{: React, Redux, MUI, Tailwind, GraphQL, Webpack, Vite, Jest, Cypress, Figma} \\
-      \textbf{Web Backend}{: NodeJS, Express, Django, Prisma, PostgreSQL, MongoDB, NextJS}\\
+      \textbf{Languages}{: C, C++, TypeScript, Python} \\
+      \textbf{Tools}{: Qt6, QML, CMake, Git, Tmux, Vim, OpenCV, FFmpeg, GStreamer} \\
+      \textbf{Web}{: React, Express, NextJS, MongoDB, Postman} \\
       \textbf{DevOps}{: Jenkins, Github Workflow, Docker, Kubernetes(K8s), AWS, GCP} \\
-      \textbf{Tools/Others}{: Git, Tmux, Vim, Postman, OpenCV, FFmpeg, GStreamer} \\
      }}
  \end{itemize}
 
