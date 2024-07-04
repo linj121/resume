@@ -1,6 +1,8 @@
 *
 !.github/*
 !config/*
+!src
+!src/*.tex
 !.tex
 !.bib
 !.gitignore
