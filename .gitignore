@@ -1,8 +1,10 @@
 *
 !.github/*
 !config/*
-!src
-!src/*.tex
+!software
+!software/*.tex
+!part-time
+!part-time/*.tex
 !.tex
 !.bib
 !.gitignore

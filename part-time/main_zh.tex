@@ -1,0 +1,386 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage[explicit]{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Josh Lin's CV},
+    pdfauthor={Josh Lin},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% 中文支持
+\usepackage{xeCJK}
+% 设置字体
+\setCJKmainfont{Microsoft YaHei} % 主字体：微软雅黑
+\setCJKsansfont{SimHei} % 无衬线字体：黑体
+\setCJKmonofont{FangSong} % 等宽字体：仿宋
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small Josh Lin - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{
+    % avoid page braking right after the section title
+    \needspace{4\baselineskip}
+    % make the font size of the section title large and color it with the primary color
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    % print bold title, give 0.15 cm space and draw a line of 0.8 pt thickness
+    % from the end of the title to the end of the body
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[] % section title formatting
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    % \placelastupdatedtext
+    \begin{header}
+        \fontsize{30 pt}{30 pt}
+        \textbf{林捷栩}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Hamilton, ON}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:jiexulin99@gmail.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}jiexulin99@gmaili.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+90-541-999-99-99}{{\footnotesize\faPhone*}\hspace*{0.13cm}647-891-5329}}%
+        % \kern 0.25 cm%
+        % \AND%
+        % \kern 0.25 cm%
+        % \mbox{\hrefWithoutArrow{https://yourwebsite.com/}{{\footnotesize\faLink}\hspace*{0.13cm}yourwebsite.com}}%
+        % \kern 0.25 cm%
+        % \AND%
+        % \kern 0.25 cm%
+        % \mbox{\hrefWithoutArrow{https://linkedin.com/in/yourusername}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}yourusername}}%
+        % \kern 0.25 cm%
+        % \AND%
+        % \kern 0.25 cm%
+        % \mbox{\hrefWithoutArrow{https://github.com/yourusername}{{\footnotesize\faGithub}\hspace*{0.13cm}yourusername}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{个人总结}
+        
+        \begin{onecolentry}
+          热情开朗、注重客户体验，拥有零售和客户服务的工作经验。擅长根据顾客的需求提供合适的产品建议，并且能够维持店铺的整洁和良好氛围。热衷于为顾客提供卓越的服务，并希望通过团队合作为整体业绩提升贡献力量。
+        \end{onecolentry}
+
+        % \vspace{0.2 cm}
+
+        % \begin{onecolentry}
+        %     Me again.
+        % \end{onecolentry}
+
+    
+    \section{工作时间}
+
+    \begin{onecolentry}
+        \begin{highlightsforbulletentries}
+
+        \item 可立即开始工作。
+        
+        \item 每周一至周日均可工作，包括周末和节假日。
+
+        \item 接受全职或兼职职位。
+
+        \item 工作时间灵活，包括晚班。
+
+        \end{highlightsforbulletentries}
+    \end{onecolentry}
+
+    \section{教育背景}
+        
+        \begin{threecolentry}{\textbf{BASc}}{
+            2018年9月 – 2023年5月
+        }
+            \textbf{McMaster University}, Hamilton, ON
+            % \begin{highlights}
+            %     \item GPA: 3.9/4.0 (\href{https://example.com}{a link to somewhere})
+            %     \item \textbf{Coursework:} Computer Architecture, Comparison of Learning Algorithms, Computational Theory
+            % \end{highlights}
+        \end{threecolentry}
+
+
+    
+    \section{工作经验}
+
+
+
+        
+        \begin{twocolentry}{
+            Hamilton, ON
+
+        2023年5月 – 2023年6月
+        }
+            \textbf{QR Vape}, 销售助理
+            \begin{highlights}
+                \item 协助顾客选择符合他们需求和偏好的产品，确保提供优质的客户服务。
+                \item 维护产品库存，并整理店内展示以保持整洁。
+                \item 向顾客介绍产品特点、安全措施及使用说明。
+            \end{highlights}
+        \end{twocolentry}
+
+
+        % \vspace{0.2 cm}
+
+        % \begin{twocolentry}{
+        %     Redmond, WA
+
+        % June 2003 – Aug 2003
+        % }
+        %     \textbf{Microsoft}, Software Engineer Intern
+        %     \begin{highlights}
+        %         \item Designed a UI for the VS open file switcher (Ctrl-Tab) and extended it to tool windows
+        %         \item Created a service to provide gradient across VS and VS add-ins, optimizing its performance via caching
+        %         \item Built an app to compute the similarity of all methods in a codebase, reducing the time from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \log n)$
+        %         \item Created a test case generation tool that creates random XML docs from XML Schema
+        %         \item Automated the extraction and processing of large datasets from legacy systems using SQL and Perl scripts
+        %     \end{highlights}
+        % \end{twocolentry}
+
+
+
+    
+    % \section{Publications}
+
+
+
+        
+    %     \begin{samepage}
+    %         \begin{twocolentry}{
+    %             Jan 2004
+    %         }
+    %             \textbf{3D Finite Element Analysis of No-Insulation Coils}
+
+    %             \vspace{0.10 cm}
+
+    %             \mbox{Frodo Baggins}, \mbox{\textbf{\textit{Josh Lin}}}, \mbox{Samwise Gamgee}
+    %             \vspace{0.10 cm}
+
+    %     \href{https://doi.org/10.1109/TASC.2023.3340648}{10.1109/TASC.2023.3340648}
+    %         \end{twocolentry}
+    %     \end{samepage}
+
+
+    
+    % \section{Projects}
+
+
+
+        
+    %     \begin{twocolentry}{
+    %         \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
+    %     }
+    %         \textbf{Multi-User Drawing Tool}
+    %         \begin{highlights}
+    %             \item Developed an electronic classroom where multiple users can simultaneously view and draw on a "chalkboard" with each person's edits synchronized
+    %             \item Tools Used: C++, MFC
+    %         \end{highlights}
+    %     \end{twocolentry}
+
+
+    %     \vspace{0.2 cm}
+
+    %     \begin{twocolentry}{
+    %         \href{https://github.com/sinaatalay/rendercv}{github.com/name/repo}
+    %     }
+    %         \textbf{Synchronized Desktop Calendar}
+    %         \begin{highlights}
+    %             \item Developed a desktop calendar with globally shared and synchronized calendars, allowing users to schedule meetings with other users
+    %             \item Tools Used: C\#, .NET, SQL, XML
+    %         \end{highlights}
+    %     \end{twocolentry}
+
+
+    %     \vspace{0.2 cm}
+
+    %     \begin{twocolentry}{
+    %         2002
+    %     }
+    %         \textbf{Custom Operating System}
+    %         \begin{highlights}
+    %             \item Built a UNIX-style OS with a scheduler, file system, text editor, and calculator
+    %             \item Tools Used: C
+    %         \end{highlights}
+    %     \end{twocolentry}
+
+
+
+    
+    % \section{Technologies}
+
+
+
+        
+    %     \begin{onecolentry}
+    %         \textbf{Languages:} C++, C, Java, Objective-C, C\#, SQL, JavaScript
+    %     \end{onecolentry}
+
+    %     \vspace{0.2 cm}
+
+    %     \begin{onecolentry}
+    %         \textbf{Technologies:} .NET, Microsoft SQL Server, XCode, Interface Builder
+    %     \end{onecolentry}
+
+
+    
+
+\end{document}
