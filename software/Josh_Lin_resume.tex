@@ -1,0 +1,300 @@
+%-------------------------
+% Resume in Latex
+% Template Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome} % social icons
+\usepackage{geometry} % Margins
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Set margins
+\geometry{
+  left=0.6in,
+  right=0.6in,
+  top=0.4in,
+  bottom=0.2in
+}
+
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{
+  \begin{itemize}[leftmargin=0.2in, label=\textbullet]
+    \item\small{
+      {#1 \vspace{-2pt}}
+    }
+  \end{itemize}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% ----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Josh Lin} \\ \vspace{7pt}
+    \small \faPhone \thinspace \thinspace 647-891-5329
+    $|$ \faEnvelope \thinspace \thinspace \href{mailto:joshlin.dev@gmail.com}{\underline{joshlin.dev@gmail.com}}
+    $|$ \faLinkedin \thinspace \thinspace \href{https://linkedin.com/in/jiexulin}{\underline{linkedin.com/in/jiexulin}}
+    $|$ \faGithub \thinspace \thinspace \href{https://github.com/linj121}{\underline{github.com/linj121}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McMaster University}{Hamilton, ON}
+      {Bachelor of Applied Science in Honours Computer Science}{September 2018 -- June 2023}
+  \resumeSubHeadingListEnd
+
+%
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      % TODO: learn and apply: Golang, C++
+      \textbf{Languages}{: TypeScript, JavaScript, Python, Java, C++, (\textbf{DSL}: CSS, HTML, SQL)} \\
+      % TODO: learn and apply: NextJS, Redux, Tailwind, Styled Components
+      \textbf{Frontend}{: React, Redux, Tailwind, Vite, Webpack } \\
+      % TODO: learn and apply: SpringBoot
+      \textbf{Backend}{: NodeJS, Express, Prisma, PostgreSQL, MongoDB, SQLite, Redis, Jest, Cypress, Selenium, Swagger } \\
+      % TODO: learn and apply: Prometheus, Grafana, Terraform, Jenkins, (K8s, ArgoCD?)
+      % TODO: get an AWS cert 
+      \textbf{CICD/Cloud}{: Google Cloud Platform, AWS, Docker, GitHub Actions, Nginx, Caddy } \\
+      \textbf{Others}{: Linux, Git, Vim, CMake, ffmpeg } \\
+     }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer}{July 2023 -- July 2024}
+      {Longan Vision Corp.}{Hamilton, ON}
+        \resumeItemListStart
+        % summary 
+          \resumeItem{Led the technical redevelopment of a live streaming platform, improving scalability, real-time streaming capabilities, and UI/UX to meet demands of emergency monitoring applications.}
+        \resumeItemListEnd
+        % frontend
+        \resumeSubSubheading{Frontend}{}
+          \resumeItemListStart
+            \resumeItem{Reduced webpage load time by 100ms by caching user data in session storage, minimizing repetitive Google Firestore queries, and ensuring fast data retrieval across page reloads.}
+            \resumeItem{Designed and implemented dynamic video layout components using React and CSS Grid, supporting grid views with a context menu for channel selection and full-screen toggling, enhancing monitoring flexibility.}
+          \resumeItemListEnd
+        % backend/architecture
+        \resumeSubSubheading{Backend}{}
+          \resumeItemListStart
+            \resumeItem{Improved real-time user experience by reducing streaming latency from 8 seconds to under 2 seconds (300ms optimal) using WebRTC as an upgrade to HLS.}
+            \resumeItem{Reduced bandwidth and resource consumption for IoT devices by transforming WebRTC from P2P mesh network to a client-server architecture using a media server as a Selective Forwarding Unit.}
+            \resumeItem{Secured media resources by implementing user authentication and RBAC through RESTful APIs with token-based validation, using Google Firebase SDK, Node.js, Express, and TypeScript.}
+          \resumeItemListEnd
+        % devops
+        \resumeSubSubheading{Devops}{}
+          \resumeItemListStart
+            \resumeItem{Simplified the deployment process on Google Cloud Compute Engine by containerizing proxy servers and backend servers with Docker Compose, reducing server setup time by over 80\%.}
+            \resumeItem{Secured sensitive data transmission and reduced attack surface by configuring Google Cloud VPC firewall policies and restricting unnecessary port access (HTTPs, SSH and essential TCP/UDP ports).}
+            \resumeItem{Reduced application downtime by automating TLS/SSL certificate renewals and developing a Bash script as a post-renewal hook for Certbot to deploy updated certificates.}
+          \resumeItemListEnd  
+
+    \resumeSubheading
+      {Data Analyst Intern}{June 2021 -- January 2022}
+      {Didi Global Inc.}{}
+      \resumeItemListStart
+        % TODO:
+        % 问题：
+        % 目标：
+        % 行动：
+        % 结果: 优化SQL查询
+        % \resumeItem{}
+
+        % 问题：新季度的用户持续流失
+        % 目标：挽回用户，提高用户留存率
+        % 行动：使用漏斗分析法，通过各个维度，分析新老用户数据
+        % 结果：与运营部门合作，使用户留存率提高了百分之5.2
+        \resumeItem{Boosted monthly customer rentention rate by 5.2\% by identifying key churn areas using funnel analysis on data from both new and existing customers.}
+        % 问题：用户活跃度低，用户使用时长短
+        % 目标：分析原因，并搭建一套分析体系，便于后续跟踪
+        % 行动：定义并搭建用户生命周期模型，协助数据部门搭建数据仓库(DWM)，以方便取数分析
+        % 结果：提升了分析效率，为后续长期的用户活跃度监控和提升提供了良好的框架和基础
+        % \resumeItem{Addressed customer inactivity issue by designing a lifecycle framework, aiding the data department in setting up a DWM table, which enhanced analysis \textbf{efficiency} and laid a solid foundation for future analysis}
+        % 问题：每日需要手动提取数据，生成报表，发送给各个部门
+        % 目标：自动化流程，每日准时提取和发送报表
+        % 行动：和RPA部门合作，使用Python编写脚本，实现自动提取下载数据，生成excel报表，并发送到群里
+        % 结果：节省了大量时间，提高了工作效率
+        \resumeItem{Automated daily HiveSQL queries and Excel report generation using Python, ensuring timely sharing of insights with team members and stakeholders.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+   % \resumeSubSubheading
+   %  {Software Engineer I}{Oct 2014 - Sep 2016}
+   %  \resumeItemListStart
+   %     \resumeItem{Apache Beam}
+   %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+   %  \resumeItemListEnd
+   % \resumeSubHeadingListEnd
+% -------------------------------------------
+
+    % \resumeSubheading
+    %   {Information Technology Support Specialist}{Sep. 2018 -- Present}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Communicate with managers to set up campus computers used on campus}
+    %     \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
+    %     \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
+    % \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
+    %   {Southwestern University}{Georgetown, TX}
+    %   \resumeItemListStart
+    %     \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
+    %     \resumeItem{Developed a game in Java to test the generated dungeons}
+    %     \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
+    %     \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
+    %     \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
+    %     \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+    %   \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Convo, an RPA tool for instant messaging apps} $|$ \faGithub \thinspace \thinspace \href{https://github.com/linj121/convo}{\underline{github.com/linj121/convo}}}{July 2024 - Now}
+        \resumeItemListStart
+          \resumeItem{Implemented a highly customizable plugin system and a task scheduler system for instant messaging apps (eg. WhatsApp) using NodeJS, TypeScript and Prisma (SQLite3).}
+          \resumeItem{Developed a CLI-like tool for managing plugins with a custom parser using regular expression.}
+          \resumeItem{Improved user experience by integrating AI Agents with text2speech/speech2text features via OpenAI APIs.}
+        \resumeItemListEnd
+      
+      \resumeProjectHeading
+        {\textbf{Self-hosting} $|$ Docker, Grafana, Prometheus, Cloudflare}{June 2024 - Now}
+        \resumeItemListStart
+          \resumeItem{Self-hosted 11 Docker containers on a cloud VPS for services like Gitea, Mailserver, and Keycloak.}
+          \resumeItem{Enhanced email deliverability by authenticating the mail domain with SPF, DKIM and DMARC on Cloudflare.}
+          \resumeItem{Maintained high service availability by enabling monitoring and alerts using Grafana and Prometheus.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------OPEN SOURCE-----------
+% \section{Open Source}
+%   \resumeSubHeadingListStart
+%     \resumeProjectHeading
+%       {\textbf{\underline{\href{https://www.npmjs.com/package/gpt-tokens}{gpt-tokens}}} $|$ OpenAI API tokens consumption and pricing calculator $|$ \emph  {NodeJS, TypeScript}}{}
+%       \resumeItemListStart
+%         % \resumeItem{Contributed to gpt-tokens, an open source library published on npm (95    stars, 6k weekly downloads) for calculating token and pricing usage of calling  OpenAI  API endpoints}
+%         % \resumeItem{Enhanced collaboration and increased productivity by setting up CI    pipeline for unit tests and regression tests}
+%         \resumeItem{\faGithub \thinspace \thinspace Pull Request: \underline{github.com/Cainier/gpt-tokens/pull/50} $|$ Maintained stability by developing performance benchmarks for components utilizing tokenization algorithms and refactoring parts of the code to enhance library encapsulation.}
+%       \resumeItemListEnd
+%   \resumeSubHeadingListEnd
+
+
+
+
+%-------------------------------------------
+\end{document}
+
