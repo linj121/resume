@@ -153,7 +153,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       % TODO: learn and apply: Golang, C++
-      \textbf{Languages}{: TypeScript, JavaScript, Python, Java, C++, (\textbf{DSL}: CSS, HTML, SQL)} \\
+      \textbf{Languages}{: TypeScript, JavaScript, SQL, HTML/CSS, Python, Java, C++} \\
       % TODO: learn and apply: NextJS, Redux, Tailwind, Styled Components
       \textbf{Frontend}{: React, Redux, Tailwind, Vite, Webpack } \\
       % TODO: learn and apply: SpringBoot
@@ -161,7 +161,6 @@
       % TODO: learn and apply: Prometheus, Grafana, Terraform, Jenkins, (K8s, ArgoCD?)
       % TODO: get an AWS cert 
       \textbf{CICD/Cloud}{: Google Cloud Platform, AWS, Docker, GitHub Actions, Nginx, Caddy } \\
-      \textbf{Others}{: Linux, Git, Vim, CMake, ffmpeg } \\
      }}
  \end{itemize}
 
@@ -170,7 +169,7 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Developer}{July 2023 -- July 2024}
+      {Full Stack Developer}{July 2023 -- July 2024}
       {Longan Vision Corp.}{Hamilton, ON}
         \resumeItemListStart
         % summary 
@@ -179,22 +178,22 @@
         % frontend
         \resumeSubSubheading{Frontend}{}
           \resumeItemListStart
-            \resumeItem{Reduced webpage load time by 100ms by caching user data in session storage, minimizing repetitive Google Firestore queries, and ensuring fast data retrieval across page reloads.}
-            \resumeItem{Designed and implemented dynamic video layout components using React and CSS Grid, supporting grid views with a context menu for channel selection and full-screen toggling, enhancing monitoring flexibility.}
+            \resumeItem{Reduced webpage load time by 100ms by caching user data in \textbf{session storage}, minimizing repetitive Google Firestore queries, and ensuring fast data retrieval across page reloads.}
+            \resumeItem{Designed and implemented dynamic video layout components using \textbf{React} and \textbf{CSS Grid}, supporting grid views with a context menu for channel selection and full-screen toggling, enhancing monitoring flexibility.}
           \resumeItemListEnd
         % backend/architecture
         \resumeSubSubheading{Backend}{}
           \resumeItemListStart
-            \resumeItem{Improved real-time user experience by reducing streaming latency from 8 seconds to under 2 seconds (300ms optimal) using WebRTC as an upgrade to HLS.}
-            \resumeItem{Reduced bandwidth and resource consumption for IoT devices by transforming WebRTC from P2P mesh network to a client-server architecture using a media server as a Selective Forwarding Unit.}
-            \resumeItem{Secured media resources by implementing user authentication and RBAC through RESTful APIs with token-based validation, using Google Firebase SDK, Node.js, Express, and TypeScript.}
+            \resumeItem{Improved real-time user experience by reducing streaming latency from 8 seconds to under 2 seconds (\textbf{300ms} optimal) using \textbf{WebRTC} as an upgrade to HLS.}
+            \resumeItem{Reduced bandwidth and resource consumption for IoT devices by transforming WebRTC from P2P mesh network to a client-server architecture using a C++ media server as a Selective Forwarding Unit.}
+            \resumeItem{Secured media resources by implementing user authentication and RBAC through RESTful APIs with token-based validation, using \textbf{Google Firebase SDK}, \textbf{Node.js}, \textbf{Express}, and \textbf{TypeScript}.}
           \resumeItemListEnd
         % devops
         \resumeSubSubheading{Devops}{}
           \resumeItemListStart
-            \resumeItem{Simplified the deployment process on Google Cloud Compute Engine by containerizing proxy servers and backend servers with Docker Compose, reducing server setup time by over 80\%.}
-            \resumeItem{Secured sensitive data transmission and reduced attack surface by configuring Google Cloud VPC firewall policies and restricting unnecessary port access (HTTPs, SSH and essential TCP/UDP ports).}
-            \resumeItem{Reduced application downtime by automating TLS/SSL certificate renewals and developing a Bash script as a post-renewal hook for Certbot to deploy updated certificates.}
+            \resumeItem{Simplified the deployment process on Google Cloud Compute Engine by containerizing proxy servers and backend servers with \textbf{Docker Compose}, reducing server setup time by over 80\%.}
+            \resumeItem{Secured sensitive data transmission and reduced attack surface by configuring \textbf{Google Cloud VPC} firewall policies and restricting unnecessary port access (HTTPs, SSH and essential TCP/UDP ports).}
+            \resumeItem{Reduced application downtime by automating \textbf{TLS/SSL certificate} renewals and developing a Bash script as a post-renewal hook for Certbot to deploy updated certificates.}
           \resumeItemListEnd  
 
     \resumeSubheading
@@ -222,7 +221,7 @@
         % 目标：自动化流程，每日准时提取和发送报表
         % 行动：和RPA部门合作，使用Python编写脚本，实现自动提取下载数据，生成excel报表，并发送到群里
         % 结果：节省了大量时间，提高了工作效率
-        \resumeItem{Automated daily HiveSQL queries and Excel report generation using Python, ensuring timely sharing of insights with team members and stakeholders.}
+        \resumeItem{Automated daily \textbf{HiveSQL} queries and Excel report generation using \textbf{Python}, ensuring timely sharing of insights with team members and stakeholders.}
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -265,17 +264,17 @@
       \resumeProjectHeading
         {\textbf{Convo, an RPA tool for instant messaging apps} $|$ \faGithub \thinspace \thinspace \href{https://github.com/linj121/convo}{\underline{github.com/linj121/convo}}}{July 2024 - Now}
         \resumeItemListStart
-          \resumeItem{Implemented a highly customizable plugin system and a task scheduler system for instant messaging apps (eg. WhatsApp) using NodeJS, TypeScript and Prisma (SQLite3).}
+          \resumeItem{Implemented a highly customizable plugin system and a task scheduler system for instant messaging apps (eg. WhatsApp) using \textbf{NodeJS}, \textbf{TypeScript} and \textbf{Prisma} (SQLite3).}
           \resumeItem{Developed a CLI-like tool for managing plugins with a custom parser using regular expression.}
-          \resumeItem{Improved user experience by integrating AI Agents with text2speech/speech2text features via OpenAI APIs.}
+          \resumeItem{Improved user experience by integrating AI Agents with text2speech/speech2text features via \textbf{OpenAI APIs}.}
         \resumeItemListEnd
       
       \resumeProjectHeading
         {\textbf{Self-hosting} $|$ Docker, Grafana, Prometheus, Cloudflare}{June 2024 - Now}
         \resumeItemListStart
-          \resumeItem{Self-hosted 11 Docker containers on a cloud VPS for services like Gitea, Mailserver, and Keycloak.}
-          \resumeItem{Enhanced email deliverability by authenticating the mail domain with SPF, DKIM and DMARC on Cloudflare.}
-          \resumeItem{Maintained high service availability by enabling monitoring and alerts using Grafana and Prometheus.}
+          \resumeItem{Self-hosted 11 \textbf{Docker} containers on a cloud VPS for services like Gitea, Mailserver, and Keycloak.}
+          \resumeItem{Enhanced email deliverability by authenticating the mail domain with SPF, DKIM and DMARC on \textbf{Cloudflare}.}
+          \resumeItem{Maintained high service availability by enabling monitoring and alerts using \textbf{Grafana} and \textbf{Prometheus}.}
         \resumeItemListEnd
 
     \resumeSubHeadingListEnd
