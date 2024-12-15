@@ -153,14 +153,14 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
       % TODO: learn and apply: Golang, C++
-      \textbf{Languages}{: C\#, SQL, TypeScript, JavaScript, HTML/CSS, Python,  Java, C++} \\
+      \textbf{Languages}{: C\#, SQL, JavaScript/TypeScript, CSS/HTML, Python,  Java, C++} \\
       % TODO: learn and apply: NextJS, Redux, Tailwind, Styled Components
       \textbf{Frontend}{: React, Redux, Tailwind, Vite, Jest, Mocha, Cypress, Webpack } \\
       % TODO: learn and apply: SpringBoot
       \textbf{Backend}{: ASP.NET, ASP.NET Core, Entity Framework Core, xUnit, NodeJS, PostgreSQL, Redis, Swagger } \\
       % TODO: learn and apply: Prometheus, Grafana, Terraform, Jenkins, (K8s, ArgoCD?)
       % TODO: get an AWS cert 
-      \textbf{Others}{: REST APIs, GCP, AWS, Docker, GitHub Actions, Nginx } \\
+      \textbf{CICD/Others}{: GCP, AWS, Docker, Kubernetes, GitHub Actions, Nginx, GStreamer, FFmpeg } \\
       % \textbf{Others}{: OOP, Linux, Git, Vim, CMake } \\
      }}
  \end{itemize}
@@ -174,7 +174,7 @@
       {Longan Vision Corp.}{Hamilton, ON}
         \resumeItemListStart
         % summary 
-          \resumeItem{Led the technical redevelopment of a live streaming platform, improving scalability, real-time streaming capabilities, and UI/UX to meet demands of emergency monitoring applications.}
+          \resumeItem{Led the technical redevelopment of a \textbf{live video streaming platform}, improving scalability, real-time streaming capabilities, and \textbf{UI/UX} to meet demands of emergency monitoring applications.}
         \resumeItemListEnd
         % frontend
         \resumeSubSubheading{Frontend}{}
@@ -185,15 +185,15 @@
         % backend/architecture
         \resumeSubSubheading{Backend}{}
           \resumeItemListStart
-            \resumeItem{Improved real-time user experience by reducing streaming latency from 8 seconds to under 2 seconds (\textbf{300ms} optimal) using \textbf{WebRTC} as an upgrade to HLS.}
-            \resumeItem{Reduced bandwidth and resource consumption for IoT devices by transforming WebRTC from P2P mesh network to a client-server architecture using a C++ media server as a Selective Forwarding Unit.}
+            \resumeItem{Improved real-time user experience by reducing streaming latency from 8 seconds to under 2 seconds (\textbf{300ms} optimal) using \textbf{WebRTC} as an upgrade to \textbf{HTTP Live Streaming (HLS)}.}
+            \resumeItem{Optimized bandwidth consumption for \textbf{IoT} devices by enabling \textbf{RTMP}-based stream pushing to a C++ media server acting as a SFU, transforming \textbf{WebRTC} from a P2P mesh network to a client-server architecture.}
             \resumeItem{Secured media resources by implementing user authentication and RBAC through \textbf{REST APIs} with token-based validation, using \textbf{C\#}, \textbf{ASP.NET Core}, \textbf{EF Core} and \textbf{Google Firebase SDK}.}
           \resumeItemListEnd
         % devops
         \resumeSubSubheading{Devops}{}
           \resumeItemListStart
             \resumeItem{Simplified the deployment process on \textbf{Google Cloud Compute Engine} by containerizing proxy servers and backend servers with \textbf{Docker Compose}, reducing server setup time by over 80\%.}
-            \resumeItem{Secured sensitive data transmission and reduced attack surface by configuring \textbf{Google Cloud VPC} firewall policies and restricting unnecessary port access (HTTPs, SSH and essential TCP/UDP ports).}
+            \resumeItem{Secured sensitive data transmission by configuring \textbf{Google Cloud VPC} firewall policies and restricting unnecessary port access (HTTPs, SSH and essential TCP/UDP ports).}
             \resumeItem{Reduced application downtime by automating \textbf{TLS/SSL certificate} renewals and developing a Bash script as a post-renewal hook for Certbot to deploy updated certificates.}
           \resumeItemListEnd  
 
@@ -263,10 +263,9 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-        {\textbf{Convo, a SaaS platform for automating instant messaging apps} $|$ \faGithub \thinspace \thinspace \href{https://github.com/linj121/convo}{\underline{github.com/linj121/convo}}}{July 2024 - Now}
+        {\textbf{Convo, a SaaS platform for automating messaging apps} $|$ \faGithub \thinspace \thinspace \href{https://github.com/linj121/convo}{\underline{github.com/linj121/convo}}}{July 2024 - Now}
         \resumeItemListStart
-          \resumeItem{Implemented a highly customizable plugin system and a task scheduler system for instant messaging apps (eg. WhatsApp) using \textbf{NodeJS}, \textbf{TypeScript} and \textbf{Prisma} (SQLite3).}
-          \resumeItem{Developed a CLI-like tool for managing plugins with a custom parser using regular expression.}
+          \resumeItem{Implemented a highly customizable plugin system and a task scheduler system for messaging apps (eg. WhatsApp) using \textbf{NodeJS}, \textbf{TypeScript} and \textbf{Prisma} (\textbf{SQLite3}).}
           \resumeItem{Improved user experience by integrating \textbf{AI Agents} with text2speech/speech2text features via \textbf{OpenAI APIs}.}
         \resumeItemListEnd
       
